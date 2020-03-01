@@ -3,27 +3,16 @@ import React from 'react';
 import Header from './Header'
 import Footer from './Footer';
 import Note from './Note';
-import Notes from "../Notes";
+import CreateAera from './CreateArea'
 
-// const allNotes = Notes.map((note)=>{
-//     return < Note
-//     key = {note.key} 
-//     title = {note.title}
-//     content = {note.content} />
-// });
 
  const App=()=> {
     return (
         <div>
            <Header />
-           {Notes.map((noteItem)=> {
-               return <Note 
-               key = {noteItem.key}
-               title = {noteItem.title}
-               content = {noteItem.content}
-               />
-           })}
-           
+          <CreateAera
+          />
+           <Note key={1} title="Note title" content="Note content" >
            <Footer />
            
         </div>
@@ -32,3 +21,4 @@ import Notes from "../Notes";
 
 
 export default App;
+
